@@ -20,6 +20,13 @@ def favorite_animal(users_animal):
     # display message based on user input
     return f'Wow, {users_animal} is my favorite animal, too!'
 
+# Favourite dessert
+
+@app.route('/dessert/<users_dessert>')
+def favorite_dessert(users_dessert):
+    # display message based on user input
+    return f'How did you know I liked {users_dessert}?'
+
 
 # tell python how to run the server
 # Always needs to be at the very bottom
