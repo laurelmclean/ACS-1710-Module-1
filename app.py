@@ -15,7 +15,7 @@ app= Flask(__name__)
 @app.route('/')
 def homepage():
     # returns the page contents that will show up in browser
-    return 'Are you there, world? It\'s me Ducky!'
+    return 'Are you there, world? It\'s me, Ducky!'
 
 
 # route for user to add their favourite animal
@@ -34,7 +34,7 @@ def favorite_dessert(users_dessert):
 
 # Mad Libs
 
-@app.route('/<adjective>/<noun>')
+@app.route('/madlibs/<adjective>/<noun>')
 def mad_libs(adjective, noun):
     return f'I also love {adjective} {noun}!'
 
