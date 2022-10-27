@@ -27,6 +27,35 @@ def favorite_dessert(users_dessert):
     # display message based on user input
     return f'How did you know I liked {users_dessert}?'
 
+# Mad Libs
+
+@app.route('/<adjective>/<noun>')
+def mad_libs(adjective, noun):
+    return f'I also love {adjective} {noun}!'
+
+#  Multiply two numbers
+
+@app.route('/multiply/<number1>/<number2>')
+def multiply(number1, number2):
+    # validates and multiplies
+    if number1.isdigit() and number2.isdigit() == True:
+        total = int(number1) * int(number2)
+        return f'{number1} times {number2} is {total}!'
+    else:
+        return "Invalid inputs. Please try again by entering 2 numbers!"
+
+# say N times
+
+
+@app.route('/sayntimes/<word>/<n>')
+def say_n_times(word, n):
+    # validates and loops
+    if number1.isdigit() and number2.isdigit() == True:
+        total = int(number1) * int(number2)
+        return f'{number1} times {number2} is {total}!'
+    else:
+        return "Invalid inputs. Please try again by entering 2 numbers!"
+
 
 # tell python how to run the server
 # Always needs to be at the very bottom
